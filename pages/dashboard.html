@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetupMaster - Dashboard Geral</title>
+  
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="shortcut icon" href="../assets/images/icons/favicon-setup_m.svg" type="image/x-icon">
+</head>
+<body>
+
+  <div class="dashboard-shell">
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-logo">
+          <a href="../index.html" class="logo-link">
+            <img src="../assets/images/logo.png" alt="Logo SetupMaster">
+          </a>
+        </div>
+
+        <button
+          class="sidebar-hamburger"
+          id="sidebar-hamburger"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="sidebar-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+       <nav class="sidebar-menu" id="sidebar-menu" aria-label="Navegação principal">
+        <a href="dashboard.html" class="active" aria-current="page"><img src="../assets/images/icons/dashboard-icon.svg" alt=""> DASHBOARD</a>
+        <a href="machines.html"><img src="../assets/images/icons/machine-icon.svg" alt=""> MÁQUINAS</a>
+        <a href="tools.html"><img src="../assets/images/icons/tools-icon.svg" alt=""> FERRAMENTAS</a>
+        <a href="parts.html"><img src="../assets/images/icons/parts-icon.svg" alt=""> PEÇAS</a>
+        <a href="setup-compare.html"><img src="../assets/images/icons/setup-compare.svg" alt=""> SETUP-RÁPIDO</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <img src="../assets/images/icons/user.svg" alt="Ícone de perfil de Arthur Henrique">
+        <div class="user-info">
+          <span class="user-name">Arthur Henrique</span>
+          <small class="user-role">Tech Lead</small>
+        </div>
+      </div>
+    </aside>
+
+    
+    <main class="main-body">
+      <header class="top-header">
+        <h2>DASHBOARD</h2>
+        <span class="section-tag light">VISÃO GERAL</span>
+      </header>
+
+      <div class="content-container">
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-info">
+              <span class="stat-title">MÁQUINAS ATIVAS</span>
+              <h3 class="stat-value" id="kpi-machines">0</h3>
+            </div>
+            <div class="stat-icon-wrapper">
+              <img src="../assets/images/icons/machine-viewing.svg" alt="" aria-hidden="true">
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <span class="stat-title">FERRAMENTAS EM USO</span>
+              <h3 class="stat-value" id="kpi-tools-in-use">0</h3>
+            </div>
+            <div class="stat-icon-wrapper">
+              <img src="../assets/images/icons/tools-icon.svg" alt="" aria-hidden="true">
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <span class="stat-title">FERRAMENTAS EM ESTOQUE</span>
+              <h3 class="stat-value" id="kpi-tools-stock">0</h3>
+            </div>
+            <div class="stat-icon-wrapper">
+              <img src="../assets/images/icons/stock-tools.svg" alt="" aria-hidden="true">
+            </div>
+          </div>
+        </div>
+
+       
+        <section class="activities-section">
+          <div class="activities-header">
+            <h3>ÚLTIMAS ATIVIDADES</h3>
+            <a href="setup-compare.html" class="btn-link">VER TODAS &rarr;</a>
+          </div>
+
+          <div class="activities-grid" id="activities-container">
+            
+          </div>
+        </section>
+
+        
+        <div class="shortcuts-grid">
+          <a href="machines.html" class="shortcut-card">
+            <div class="shortcut-content">
+              <div class="shortcut-icon-bg">
+                <img src="../assets/images/icons/settings.svg" alt="" aria-hidden="true">
+              </div>
+              <h4>MÁQUINAS</h4>
+              <p>Gerencie e monitore o status das suas máquinas</p>
+            </div>
+            <span class="shortcut-arrow">&rarr;</span>
+          </a>
+
+          <a href="tools.html" class="shortcut-card">
+            <div class="shortcut-content">
+              <div class="shortcut-icon-bg">
+                <img src="../assets/images/icons/paper.svg" alt="" aria-hidden="true">
+              </div>
+              <h4>FERRAMENTAS</h4>
+              <p>Controle o uso e a manutenção das ferramentas</p>
+            </div>
+            <span class="shortcut-arrow">&rarr;</span>
+          </a>
+
+          <a href="parts.html" class="shortcut-card">
+            <div class="shortcut-content">
+              <div class="shortcut-icon-bg">
+                <img src="../assets/images/icons/cube.svg" alt="" aria-hidden="true">
+              </div>
+              <h4>ESTOQUE</h4>
+              <p>Acompanhe o estoque de Ferramentas e Peças</p>
+            </div>
+            <span class="shortcut-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/mockData.js"></script>
+  <script src="../assets/js/pages/dashboard.js"></script>
+</body>
+</html>

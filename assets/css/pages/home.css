@@ -1,0 +1,177 @@
+/* Hero / Banner Principal */
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 560px;
+  background-image: url("/assets/images/fundo-cnc.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 36px 4.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1 1 55%;
+  min-width: 0;
+  color: var(--text-white, #fff);
+}
+
+.hero-title {
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--text-white, #fff);
+}
+
+.hero-title .highlight {
+  display: block;
+  background-image: linear-gradient(90deg, #1d8c9a, #5cb7b9, #72c9b0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.hero-description {
+  color: var(--text-gray, #e0e4e6);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 540px;
+}
+
+/* Seção Passos */
+.section-steps {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+/* Seção Recursos Fabris */
+.section-features {
+  padding: 5rem 0;
+  background-color: #f1f5f9;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  font-size: 0.8rem;
+  color: #627484;
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.feature-list li::before {
+  content: "■";
+  color: var(--color-cyan, #2199a5);
+  font-size: 0.6rem;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+/* Banner Escuro */
+.section-banner-dark {
+  background-color: #11222c;
+  color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.section-banner-dark h2 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+}
+
+.section-banner-dark p {
+  color: #9aa8b6;
+  font-size: 0.9rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Seção Agendamento */
+.section-schedule {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.schedule-subtitle {
+  font-size: 0.85rem;
+  color: #627484;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-container {
+    padding: 45px 5%;
+    gap: 25px;
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 38px 22px;
+    gap: 30px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}

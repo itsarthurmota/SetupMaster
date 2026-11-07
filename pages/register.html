@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup Master - Cadastrar Indústria</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <script src="../assets/js/components/togglePassword.js" defer></script>
+</head>
+<body class="auth-page">
+
+  <!-- VLIBRAS -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <div class="auth-container">
+
+    <!-- LADO ESQUERDO: BRANDING -->
+    <section class="brand-section">
+      <span class="badge">Gestão De Ferramental</span>
+
+      <h1>CADASTRE SUA INDÚSTRIA E PADRONIZE SEUS SETUPS COM A SUÍTE LÍDER DO SETOR AUTOMOTIVO</h1>
+
+      <p class="brand-description">
+        Elimine perdas por ferramentas incorretas, reduza tempos de pré-ajuste e alcance rastreabilidade total de fresas, brocas e mandris.
+      </p>
+
+      <ul class="features-list">
+        <li>
+          <img class="check-icon" src="../assets/images/icons/check-icon.svg" alt="" aria-hidden="true">
+          <span><strong>Setup rápido:</strong> configure suas máquinas em poucos minutos</span>
+        </li>
+        <li>
+          <img class="check-icon" src="../assets/images/icons/check-icon.svg" alt="" aria-hidden="true">
+          <span><strong>Redução comprovada</strong> de até 40% no tempo de setup</span>
+        </li>
+        <li>
+          <img class="check-icon" src="../assets/images/icons/check-icon.svg" alt="" aria-hidden="true">
+          <span><strong>Suporte técnico</strong> especializado na implantação</span>
+        </li>
+      </ul>
+    </section>
+
+    
+    <section class="register-section">
+      <div class="register-card">
+
+        <header class="card-header-top">
+          <img src="../assets/images/logo.png" alt="Setup Master" class="card-logo">
+          <span class="tag-corporative">Acesso Corporativo</span>
+        </header>
+
+        <h2>Criar Nova Conta / Cadastrar Indústria</h2>
+        <p class="subtitle">Preencha as informações técnicas para configurar seu ambiente de chão de fábrica.</p>
+
+        <form class="register-form">
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="fullname">NOME COMPLETO DO RESPONSÁVEL <span class="required">*</span></label>
+              <input type="text" id="fullname" placeholder="Ex: Carlos E. Silva" autocomplete="name" required>
+            </div>
+            <div class="input-group">
+              <label for="role">CARGO / FUNÇÃO <span class="required">*</span></label>
+              <input type="text" id="role" placeholder="Ex: Engenheiro de Processos" autocomplete="organization-title" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="email">E-MAIL CORPORATIVO <span class="required">*</span></label>
+              <input type="email" id="email" placeholder="carlos@usinagem.ind.br" autocomplete="email" required>
+            </div>
+            <div class="input-group">
+              <label for="phone">TELEFONE / RAMAL <span class="required">*</span></label>
+              <input type="tel" id="phone" placeholder="(11) 4567-8900" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="form-row full-width">
+            <div class="input-group">
+              <label for="company">NOME DA INDÚSTRIA / RAZÃO SOCIAL <span class="required">*</span></label>
+              <input type="text" id="company" placeholder="Ex: Usitec Componentes Ltda." autocomplete="organization" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="password">CRIE UMA SENHA FORTE <span class="required">*</span></label>
+              <div class="input-wrap input-wrap--password">
+                <input type="password" id="password" placeholder="••••••••" minlength="8" autocomplete="new-password" required>
+                <button class="toggle-senha" type="button" data-toggle-password aria-controls="password" aria-label="Mostrar senha" aria-pressed="false">
+                  <img
+                    src="../assets/images/icons/eye-submit.svg"
+                    data-icon-hidden="../assets/images/icons/eye-submit.svg"
+                    data-icon-visible="../assets/images/icons/eye-hidden.svg"
+                    alt=""
+                    aria-hidden="true">
+                </button>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="confirm-password">CONFIRME A SENHA <span class="required">*</span></label>
+              <div class="input-wrap input-wrap--password">
+                <input type="password" id="confirm-password" placeholder="••••••••" minlength="8" autocomplete="new-password" required>
+                <button class="toggle-senha" type="button" data-toggle-password aria-controls="confirm-password" aria-label="Mostrar senha" aria-pressed="false">
+                  <img
+                    src="../assets/images/icons/eye-submit.svg"
+                    data-icon-hidden="../assets/images/icons/eye-submit.svg"
+                    data-icon-visible="../assets/images/icons/eye-hidden.svg"
+                    alt=""
+                    aria-hidden="true">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <span class="info-icon" aria-hidden="true">ⓘ</span>
+            <span>Requisitos mínimos: 8 caracteres, incluindo letras maiúsculas e caracteres especiais.</span>
+          </div>
+
+          <label class="terms-group">
+            <input type="checkbox" id="terms" required>
+            <span>
+              Concordo expressamente com os <a href="#">Termos de Uso</a> e com as
+              <a href="#">Políticas de Segurança Industrial de Dados Fabris</a>.
+            </span>
+          </label>
+
+          <button type="submit" class="btn-submit">CONCLUIR CADASTRO &amp; COMEÇAR SETUP &rarr;</button>
+        </form>
+
+        <p class="card-footer">Já possui cadastro? <a href="login.html">Fazer login</a></p>
+
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

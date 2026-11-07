@@ -1,0 +1,263 @@
+body.auth-page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Noto Sans', sans-serif, system-ui;
+  background-color: var(--bg-dark);
+  background-image: linear-gradient(rgba(11, 19, 25, 0.45), rgba(11, 19, 25, 0.45)), url('/assets/images/register-overlay.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.login-page {
+  background-image:
+    linear-gradient(rgba(11, 19, 25, 0.75), rgba(11, 19, 25, 0.75)),
+    url("/assets/images/login.png");
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+  min-height: 100vh;
+  padding: 0 3rem;
+  box-sizing: border-box;
+}
+
+/* Painel da Marca */
+.brand-section {
+  flex: 0 0 420px;
+  position: relative;
+  padding: 2rem 2.2rem;
+  border-radius: 20px;
+  background: rgba(18, 31, 40, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 20px 40px rgba(0, 0, 0, 0.25);
+  color: var(--text-white);
+  box-sizing: border-box;
+}
+
+.brand-section .badge {
+  display: inline-block;
+  background-color: rgba(34, 163, 169, 0.15);
+  color: #4bc2c7;
+  border: 1px solid rgba(34, 163, 169, 0.4);
+  border-radius: 12px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.brand-section h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.brand-section h1 .highlight {
+  color: var(--color-cyan);
+}
+
+.brand-description {
+  color: var(--text-gray);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--text-gray);
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.features-list .check-icon {
+  display: block;
+  flex: 0 0 17px;
+  width: 17px;
+  height: 13px;
+}
+
+/* Seção de Formulários Auth */
+.register-section {
+  flex: 0 0 460px;
+}
+
+.login-page .register-section {
+  flex: 0 1 460px;
+}
+
+.register-card {
+  background-color: #101b24;
+  border: 1px solid rgba(34, 163, 169, 0.25);
+  border-radius: 8px;
+  padding: 1.5rem 1.8rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.login-page .register-card {
+  background-color: #121e28;
+  border: 1px solid rgba(34, 163, 169, 0.25);
+  border-radius: 6px;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.card-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.card-logo {
+  height: 24px;
+  width: auto;
+}
+
+.card-logo-box {
+  color: #22a3a9;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.card-logo-box strong {
+  color: #ffffff;
+}
+
+.tag-corporative {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  color: var(--text-gray);
+}
+
+.register-card h2 {
+  color: var(--text-white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+}
+
+.register-card .subtitle {
+  color: var(--text-gray);
+  font-size: 0.75rem;
+  margin: 0 0 1rem 0;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.login-page .register-form .input-wrap input[type="email"],
+.login-page .register-form .input-wrap input[type="password"] {
+  height: 42px;
+  padding: 0 0.65rem !important;
+  font-size: 0.85rem !important;
+}
+
+.login-page .register-form .input-wrap input[type="password"] {
+  padding-right: 2.5rem !important;
+}
+
+.card-footer {
+  text-align: center;
+  margin-top: 0.8rem;
+  font-size: 0.7rem;
+  color: var(--text-gray);
+}
+
+.card-footer a {
+  color: var(--color-cyan);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 980px) {
+  .auth-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .brand-section {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .register-section {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-container {
+    justify-content: flex-start;
+    gap: 0;
+    padding: 1rem 0.75rem;
+  }
+
+  .brand-section {
+    display: none;
+  }
+
+  .register-card,
+  .login-page .register-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .card-header-top {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .register-card h2 {
+    font-size: 1rem;
+  }
+
+  .login-page .register-form .input-wrap input[type="email"],
+  .login-page .register-form .input-wrap input[type="password"] {
+    font-size: 16px !important;
+  }
+}

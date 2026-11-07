@@ -1,0 +1,236 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(6, 12, 17, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background-color: #12212b;
+  border: 1px solid rgba(34, 163, 169, 0.35);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.modal-step {
+  display: none;
+}
+
+.modal-step.active {
+  display: block;
+}
+
+#modalStep1 .btn-modal-submit,
+#modalStep2 .btn-modal-submit {
+  margin-top: 2rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #0e1921;
+}
+
+.modal-title-box {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.key-icon-box {
+  background-color: rgba(34, 163, 169, 0.15);
+  color: #22a3a9;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+}
+
+.modal-title-box h3 {
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.modal-subtitle {
+  font-size: 0.65rem;
+  color: #627484;
+  margin: 0;
+}
+
+.close-modal-btn {
+  background: transparent;
+  border: none;
+  color: #627484;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-modal-btn:hover {
+  color: #ffffff;
+}
+
+.modal-body {
+  padding: 1.2rem 1.4rem;
+}
+
+.modal-alert-box {
+  background-color: rgba(34, 163, 169, 0.08);
+  border: 1px solid rgba(34, 163, 169, 0.25);
+  border-radius: 6px;
+  padding: 0.7rem 0.8rem;
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.modal-alert-box .alert-icon {
+  color: #22a3a9;
+  font-size: 0.9rem;
+}
+
+.modal-alert-box p {
+  font-size: 0.68rem;
+  color: #9aa8b6;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.token-inputs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--text-gray);
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.token-inputs input {
+  width: 100%;
+  height: 40px;
+  background-color: #1a2936;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.input-wrap--password-modal {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrap--password-modal input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 0.8rem !important;
+  padding-right: 2.5rem !important;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  background-color: #1a2936;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.input-wrap--password-modal input[type="password"]:focus {
+  border-color: #22a3a9;
+  outline: none;
+}
+
+.strength-bar-container {
+  width: 100%;
+  height: 4px;
+  background-color: #1a2936;
+  border-radius: 2px;
+  margin-top: 0.4rem;
+  overflow: hidden;
+}
+
+.strength-bar-fill {
+  width: 100%;
+  height: 100%;
+  background-color: #22a3a9;
+}
+
+.strength-status {
+  display: block;
+  text-align: right;
+  font-size: 0.6rem;
+  color: #22a3a9;
+  margin-top: 0.2rem;
+}
+
+.password-hint {
+  font-size: 0.62rem;
+  color: #627484;
+  margin-top: 0.2rem;
+}
+
+.eye-static,
+.check-valid-icon {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #22a3a9;
+  font-size: 0.8rem;
+}
+
+.eye-static {
+  color: #627484;
+}
+
+.modal-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.68rem;
+}
+
+.modal-footer-row.justify-end {
+  justify-content: flex-end;
+}
+
+.resend-text {
+  color: #627484;
+  margin: 0;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetupMaster - Comparador de Setups</title>
+  
+  
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="shortcut icon" href="../assets/images/icons/favicon-setup_m.svg" type="image/x-icon">
+</head>
+<body>
+
+  <div class="dashboard-shell">
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-logo">
+           <a href="../index.html" class="logo-link"> 
+          <img src="../assets/images/logo.png" alt="Logo SetupMaster">
+          </a>
+        </div>
+
+        <button
+          class="sidebar-hamburger"
+          id="sidebar-hamburger"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="sidebar-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="sidebar-menu" id="sidebar-menu" aria-label="Navegação principal">
+        <a href="dashboard.html"><img src="../assets/images/icons/dashboard-icon.svg" alt=""> DASHBOARD</a>
+        <a href="machines.html"><img src="../assets/images/icons/machine-icon.svg" alt=""> MÁQUINAS</a>
+        <a href="tools.html"><img src="../assets/images/icons/tools-icon.svg" alt=""> FERRAMENTAS</a>
+        <a href="parts.html"><img src="../assets/images/icons/parts-icon.svg" alt=""> PEÇAS</a>
+        <a href="setup-compare.html" class="active"><img src="../assets/images/icons/setup-compare.svg" alt=""> SETUP-RÁPIDO</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <img src="../assets/images/icons/user.svg" alt="Ícone de perfil de Arthur Henrique">
+        <div class="user-info">
+          <span class="user-name">Arthur Henrique</span>
+          <small class="user-role">Tech Lead</small>
+        </div>
+      </div>
+    </aside>
+
+  
+    <main class="main-body">
+      <header class="top-header">
+        <h2>SETUP-RÁPIDO / COMPARADOR DE PEÇAS</h2>
+      </header>
+
+      <div class="content-container">
+        
+        <div class="info-banner">
+          <p>
+            Selecione a <strong>Peça Atual</strong> (que está sendo retirada da máquina) e a <strong>Próxima Peça</strong> 
+            (que entrará em produção) para calcular o setup otimizado e minimizar o tempo de máquina parada.
+          </p>
+        </div>
+
+        
+        <div class="setup-selector-grid">
+          <!-- Peça A -->
+          <div class="card-select">
+            <label for="select-part-a">PEÇA ATUAL (SAINDO DA MÁQUINA)</label>
+            <select id="select-part-a" class="form-control">
+              <option value="">Selecione a Peça A...</option>
+            </select>
+          </div>
+
+          <div class="selector-arrow">➔</div>
+
+          
+          <div class="card-select">
+            <label for="select-part-b">PRÓXIMA PEÇA (ENTRANDO NA MÁQUINA)</label>
+            <select id="select-part-b" class="form-control">
+              <option value="">Selecione a Peça B...</option>
+            </select>
+          </div>
+        </div>
+
+        
+        <div class="action-bar">
+          <button id="btn-compare" class="btn btn-primary-large">EXECUTA ANÁLISE DE SETUP</button>
+        </div>
+
+        
+        <div id="results-panel" class="setup-results-grid hidden">
+          
+          <div class="result-box box-keep">
+            <div class="box-header">
+              <span>🟢 FERRAMENTAS EM COMUM</span>
+              <small>(Manter no carrossel)</small>
+            </div>
+            <ul id="list-keep" class="tool-list"></ul>
+          </div>
+
+         
+          <div class="result-box box-remove">
+            <div class="box-header">
+              <span>🔴 EXCLUSIVAS DA PEÇA A</span>
+              <small>(Desmontar / Devolver ao estoque)</small>
+            </div>
+            <ul id="list-remove" class="tool-list"></ul>
+          </div>
+
+          
+          <div class="result-box box-add">
+            <div class="box-header">
+              <span>🟡 EXCLUSIVAS DA PEÇA B</span>
+              <small>(Montar / Buscar no estoque)</small>
+            </div>
+            <ul id="list-add" class="tool-list"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/mockData.js"></script>
+  <script src="../assets/js/pages/setup-compare.js"></script>
+</body>
+</html>

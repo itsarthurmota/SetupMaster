@@ -1,0 +1,133 @@
+.btn-login {
+  background-color: var(--color-cyan, #2199a5);
+  color: var(--text-white, #fff);
+  padding: 10px 17px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+  background-color: var(--color-cyan-hover, #167f89);
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-cyan, #2199a5);
+  color: var(--text-white, #fff);
+  padding: 0.9rem 1.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-cyan-hover, #167f89);
+}
+
+.btn-demo-play {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem 1rem;
+  background-color: transparent;
+  border: 1px solid #398d99;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: background-color 0.2s;
+}
+
+.btn-demo-play:hover {
+  background-color: rgba(34, 163, 169, 0.12);
+}
+
+.btn-demo-play .btn-play-icon {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px;
+  max-width: 20px;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  display: block;
+}
+
+.btn-submit {
+  background-color: #1b8e95;
+  color: var(--text-white);
+  border: none;
+  padding: 0.65rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.2rem;
+}
+
+.btn-submit:hover {
+  background-color: #16767c;
+}
+
+.btn-submit-large {
+  width: 100%;
+  background-color: #11222c;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.btn-submit-large:hover {
+  background-color: #1b2a36;
+}
+
+.btn-cancel {
+  background: transparent;
+  border: none;
+  color: #627484;
+  cursor: pointer;
+  font-size: 0.68rem;
+}
+
+.btn-cancel:hover {
+  color: #ffffff;
+}
+
+.resend-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #22a3a9;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.resend-button:hover {
+  color: #ffffff;
+}
+
+.resend-button:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+}

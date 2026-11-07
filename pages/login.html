@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SetupMaster</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="../assets/js/components/togglePassword.js" defer></script>
+</head>
+<body class="auth-page login-page">
+    <main class="auth-container">
+
+      <!-- CARD ESQUERDO: BRANDING -->
+      <section class="brand-section">
+        <span class="badge">Gestão de Ferramental</span>
+        <h1>Tecnologia e precisão para um <span class="highlight">setup sem surpresa</span></h1>
+        <p class="brand-description">Elimine paradas não programadas em tornos e centros de usinagem com catálogo unificado de fresas, brocas, pastilhas e suportes.</p>
+      </section>
+
+      <!-- CARD DIREITO: LOGIN -->
+      <section class="register-section">
+        <div class="register-card">
+
+          <header class="card-header-top">
+            <img src="../assets/images/logo.png" alt="Setup Master" class="card-logo">
+            <span class="tag-corporative">Acesso Corporativo</span>
+          </header>
+
+          <h2>Acesso ao painel operacional</h2>
+          <p class="subtitle">Preencha as informações para configurar seu ambiente de chão de fábrica.</p>
+
+          <form class="register-form">
+            <div class="form-row full-width">
+              <div class="input-group">
+                <label for="email">E-MAIL *</label>
+                <div class="input-wrap">
+                  <input id="email" type="email" class="input-full" placeholder="Ex: roberto.operacao@industria.com.br" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row full-width">
+              <div class="input-group">
+                <label for="password">SENHA *</label>
+                <div class="input-wrap input-wrap--password">
+                  <input id="password" type="password" placeholder="Digite sua senha" autocomplete="current-password" required>
+                  <button class="toggle-senha" type="button" data-toggle-password aria-controls="password" aria-label="Mostrar senha" aria-pressed="false">
+                    <img
+                      src="../assets/images/icons/eye-submit.svg"
+                      data-icon-hidden="../assets/images/icons/eye-submit.svg"
+                      data-icon-visible="../assets/images/icons/eye-hidden.svg"
+                      alt=""
+                      aria-hidden="true">
+                  </button>
+                </div>
+                <div class="forgot-link-wrap">
+                  <a href="#" id="openModalBtn" class="forgot-link">Esqueceu a senha? Clique aqui</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="remember-group">
+              <input type="checkbox" id="remember">
+              <label for="remember">Lembrar-me</label>
+            </div>
+
+            <button type="submit" class="btn-submit">ENTRAR &rarr;</button>
+          </form>
+
+          <p class="card-footer">Ainda não possui cadastro? <a href="register.html">Cadastrar-se</a></p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== MODAL POP-UP DE RECUPERAÇÃO DE SENHA ===== -->
+    <div class="modal-overlay" id="resetPasswordModal" aria-hidden="true">
+      <div class="modal-card">
+        
+        <!-- Cabeçalho do Modal -->
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <div class="key-icon-box">
+              <img src="../assets/images/icons/recover-key.svg" alt="" aria-hidden="true">
+            </div>
+            <div>
+              <h3>Redefinir Senha de Acesso</h3>
+              <p class="modal-subtitle">Autenticação de Segurança Simplificada</p>
+            </div>
+          </div>
+          <button class="close-modal-btn" id="closeModalBtn" type="button" aria-label="Fechar modal">&times;</button>
+        </div>
+
+        <!-- ETAPA 1: DIGITAR E-MAIL PARA ENVIAR CÓDIGO -->
+        <div class="modal-body modal-step active" id="modalStep1">
+          <div class="modal-alert-box">
+            <span class="alert-icon">
+              <img src="../assets/images/icons/info-recover.svg" alt="" aria-hidden="true">
+            </span>
+            <p>Insira o e-mail cadastrado para enviarmos o código de recuperação de acesso ao chão de fábrica.</p>
+          </div>
+
+          <form id="formStep1" class="modal-form">
+            <div class="input-group">
+              <label for="reset-email">E-MAIL *</label>
+              <div class="input-wrap">
+                <input id="reset-email" type="email" class="input-full" placeholder="Ex: roberto.operacao@industria.com.br" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit btn-modal-submit">Enviar código &rarr;</button>
+
+            <div class="modal-footer-row justify-end">
+              <button type="button" class="btn-cancel cancelModalBtn">Cancelar</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ETAPA 2: DIGITAR TOKEN DE 6 DÍGITOS E DEFINIR SENHA -->
+        <div class="modal-body modal-step" id="modalStep2">
+          <div class="modal-alert-box">
+            <span class="alert-icon">
+               <img src="../assets/images/icons/info-recover.svg" alt="" aria-hidden="true">
+            </span>
+            <p>Insira o código de 6 dígitos enviado para seu e-mail <strong id="userTargetEmail">ro****@regis.com.br</strong> e defina sua nova senha.</p>
+          </div>
+
+          <form id="formStep2" class="modal-form">
+            <label class="modal-label">CÓDIGO DE VALIDAÇÃO (TOKEN)</label>
+            <div class="token-inputs">
+              <input type="text" maxlength="1" inputmode="numeric" autocomplete="one-time-code" aria-label="Dígito 1 do código de validação" required>
+              <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 2 do código de validação" required>
+              <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 3 do código de validação" required>
+              <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 4 do código de validação" required>
+              <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 5 do código de validação" required>
+              <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 6 do código de validação" required>
+            </div>
+
+            <div class="input-group">
+              <label for="new-password">NOVA SENHA</label>
+              <div class="input-wrap input-wrap--password-modal">
+                <input id="new-password" type="password" required>
+                <button class="toggle-senha" type="button" data-toggle-password aria-controls="new-password" aria-label="Mostrar senha" aria-pressed="false">
+                  <img
+                    src="../assets/images/icons/eye-submit.svg"
+                    data-icon-hidden="../assets/images/icons/eye-submit.svg"
+                    data-icon-visible="../assets/images/icons/eye-hidden.svg"
+                    alt=""
+                    aria-hidden="true">
+                </button>
+              </div>
+              
+              <div class="strength-bar-container">
+                <div class="strength-bar-fill"></div>
+              </div>
+              <span class="strength-status">Forte</span>
+              <p class="password-hint">Mínimo de 8 caracteres, contendo números, letras e símbolos.</p>
+            </div>
+
+            <div class="input-group">
+              <label for="confirm-password">CONFIRMAR NOVA SENHA</label>
+              <div class="input-wrap input-wrap--password-modal">
+                <input id="confirm-password" type="password" required>
+                <button class="toggle-senha" type="button" data-toggle-password aria-controls="confirm-password" aria-label="Mostrar senha" aria-pressed="false">
+                  <img
+                    src="../assets/images/icons/eye-submit.svg"
+                    data-icon-hidden="../assets/images/icons/eye-submit.svg"
+                    data-icon-visible="../assets/images/icons/eye-hidden.svg"
+                    alt=""
+                    aria-hidden="true">
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit btn-modal-submit">Confirmar e Alterar Senha &rarr;</button>
+
+            <div class="modal-footer-row">
+              <p class="resend-text">Não recebeu o código? <button type="button" id="resendCodeBtn" class="resend-button">Enviar de novo (<span id="resendTimer">0:00</span>)</button></p>
+              <button type="button" class="btn-cancel cancelModalBtn">Cancelar</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Script de Alternância de Etapas -->
+    <script>
+      const openModalBtn = document.getElementById('openModalBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const cancelBtns = document.querySelectorAll('.cancelModalBtn');
+      const resetModal = document.getElementById('resetPasswordModal');
+
+      const step1 = document.getElementById('modalStep1');
+      const step2 = document.getElementById('modalStep2');
+      const formStep1 = document.getElementById('formStep1');
+      const formStep2 = document.getElementById('formStep2');
+      const resetEmailInput = document.getElementById('reset-email');
+      const userTargetEmail = document.getElementById('userTargetEmail');
+      const resendCodeBtn = document.getElementById('resendCodeBtn');
+      const resendTimer = document.getElementById('resendTimer');
+      const resendTimerLimit = 30;
+      let resendTimerStartedAt;
+      let resendTimerInterval;
+
+      function startResendTimer() {
+        clearInterval(resendTimerInterval);
+        resendTimerStartedAt = Date.now();
+
+        const updateResendTimer = () => {
+          const elapsedSeconds = Math.min(
+            Math.floor((Date.now() - resendTimerStartedAt) / 1000),
+            resendTimerLimit
+          );
+          resendTimer.textContent = `0:${String(elapsedSeconds).padStart(2, '0')}`;
+
+          if (elapsedSeconds === resendTimerLimit) {
+            clearInterval(resendTimerInterval);
+          }
+        };
+
+        updateResendTimer();
+        resendTimerInterval = setInterval(updateResendTimer, 1000);
+      }
+
+      function maskEmail(email) {
+        if (!email.includes('@')) return email;
+        const [user, domain] = email.split('@');
+        if (user.length <= 2) return `${user}***@${domain}`;
+        return `${user.substring(0, 2)}****@${domain}`;
+      }
+
+      openModalBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        step1.classList.add('active');
+        step2.classList.remove('active');
+        resetModal.classList.add('active');
+        resetModal.setAttribute('aria-hidden', 'false');
+      });
+
+      const closeModal = () => {
+        resetModal.classList.remove('active');
+        resetModal.setAttribute('aria-hidden', 'true');
+      };
+
+      closeModalBtn.addEventListener('click', closeModal);
+      cancelBtns.forEach(btn => btn.addEventListener('click', closeModal));
+
+      resetModal.addEventListener('click', (e) => {
+        if (e.target === resetModal) closeModal();
+      });
+
+      formStep1.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailValue = resetEmailInput.value;
+        if (emailValue) {
+          userTargetEmail.textContent = maskEmail(emailValue);
+          step1.classList.remove('active');
+          step2.classList.add('active');
+          startResendTimer();
+        }
+      });
+
+      resendCodeBtn.addEventListener('click', () => {
+        alert('Enviado!');
+        startResendTimer();
+      });
+
+      formStep2.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Senha redefinida com sucesso!');
+        closeModal();
+      });
+    </script>
+
+    <!-- VLIBRAS -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>

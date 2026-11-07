@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup Master - Início</title>
+  <link rel="icon" type="image/png" href="assets/images/icons/favicon-setup_m.svg">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/layout/header.css">
+</head>
+<body>
+
+  <!-- VLIBRAS -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- CABEÇALHO -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Setup Master">
+    </div>
+
+    <button
+      class="hamburger"
+      id="hamburger"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-menu" id="nav-menu">
+      <nav class="nav-links" aria-label="Navegação Principal">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#sobre" class="nav-link">Sobre o sistema</a>
+        <a href="#modulos" class="nav-link">Módulos</a>
+        <a href="#recursos" class="nav-link">Recursos</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#agendar" class="link-sessao nav-link">Agende uma sessão</a>
+        <a href="pages/login.html" class="btn-login">Faça Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER PRINCIPAL -->
+  <section class="hero-section" id="inicio">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          GESTÃO DE FERRAMENTAS
+          <span class="highlight">PARA UM SETUP SEM SURPRESAS</span>
+        </h1>
+        <p class="hero-description">
+          O sistema web definitivo para praticidade na usinagem, garantindo um Setup eficaz e eliminando paradas de máquinas ou pausas imprevistas, além de padronizar as trocas independente do produto a ser fabricado.
+        </p>
+        <a href="pages/register.html" class="btn-primary">
+          Registrar-se e testar na minha fábrica &rarr;
+        </a>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-header">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="card-title">SETUP MASTER - Monitor CNC</span>
+        </div>
+        <div class="card-body">
+          <span class="badge-demo">DEMO</span>
+          <button class="play-center" aria-label="Reproduzir demonstração">
+            <img src="assets/images/icons/play-button.svg" alt="play-button">
+          </button>
+
+          <button class="btn-demo-play">
+            <img src="assets/images/icons/record.svg" alt="" class="btn-play-icon" aria-hidden="true">
+            <span>Assistir Demonstração (2 min)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="benefits" id="recursos">
+    <article class="benefit">
+      <img src="assets/images/icons/settings.svg" alt="" class="benefit-icon" aria-hidden="true">
+      <span class="benefit-label">GARANTIA TÉCNICA</span>
+      <h3>Padronização</h3>
+      <p>Ferramenta correta</p>
+    </article>
+
+    <article class="benefit">
+      <img src="assets/images/icons/timer-down.svg" alt="" class="benefit-icon" aria-hidden="true">  
+      <span class="benefit-label">TEMPO DE MÁQUINA</span>
+      <h3>Menos Pausas</h3>
+      <p>Troca rápida otimizada</p>
+    </article>
+
+    <article class="benefit">
+      <img src="assets/images/icons/target.svg" alt="" class="benefit-icon" aria-hidden="true">
+      <span class="benefit-label">CONFIABILIDADE</span>
+      <h3>100% Precisão</h3>
+      <p>Trocas pré-definidas</p>
+    </article>
+
+    <article class="benefit">
+      <img src="assets/images/icons/up-trending.svg" alt="" class="benefit-icon" aria-hidden="true">
+      <span class="benefit-label">EFICIÊNCIA GERAL</span>
+      <h3>Maior Produção</h3>
+      <p>Usinagem contínua real</p>
+    </article>
+  </section>
+
+  <!-- SECÇÃO 1: PASSO A PASSO -->
+  <section class="section-steps" id="modulos">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">SIMPLICIDADE & ENGENHARIA</span>
+        <h2>DO CADASTRO À PRODUÇÃO EM 5 PASSOS</h2>
+        <p>Planejar, separar, configurar e produzir. Um fluxo visual desenhado especificamente para o chão de fábrica e a engenharia de processos.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>Cadastro de Máquinas</h3>
+          <p>Armazene as configurações de suas máquinas Tornos CNC e Centros de Usinagem.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>Cadastro de Ferramentas</h3>
+          <p>Inserção de fresas, brocas, pastilhas intercambiáveis, mandris, pinças e suportes para usinagem.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Cadastro de Peças</h3>
+          <p>Associe as ferramentas necessárias para cada operação e código de produto da fábrica.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">04</span>
+          <h3>Separação dos Itens</h3>
+          <p>O operador recebe a folha de separação para ferramentas e dispositivos.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">05</span>
+          <h3>Setup Eficaz</h3>
+          <p>Troca rápida executada com precisão, evitando incertezas e desperdício de tempo na produção.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECÇÃO 2: RECURSOS DA ROTINA FABRIL -->
+  <section class="section-features">
+    <div class="container">
+      <div class="section-header split">
+        <div>
+          <span class="section-tag">RECURSOS DE ENGENHARIA</span>
+          <h2>FEITO PARA A ROTINA FABRIL.</h2>
+        </div>
+        <p class="subtitle-right">Chega de planilhas desatualizadas ou anotações manuais na bancada do operador!</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="assets/images/icons/setup-compare.svg" alt="" class="feature-icon-img" aria-hidden="true">
+          </div>
+          <h3>Comparador de Setup</h3>
+          <p>Identifica automaticamente quais ferramentas já estão na máquina e quais realmente precisam ser substituídas entre as ordens de serviço.</p>
+          <ul class="feature-list">
+            <li>Redução de trocas desnecessárias</li>
+            <li>Otimização de paradas de máquina</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="assets/images/icons/cube.svg" alt="" class="feature-icon-img" aria-hidden="true">
+          </div>
+          <h3>Almoxarifado & Vida Útil</h3>
+          <p>Rastreabilidade de afiação de ferramentas de metal duro e controle de desgaste em porta ferramentas nos Tornos.</p>
+          <ul class="feature-list">
+            <li>Evita falta de ferramentas em lote</li>
+            <li>Histórico de durabilidade por fornecedor</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="assets/images/icons/paper.svg" alt="" class="feature-icon-img" aria-hidden="true">
+          </div>
+          <h3>Fichas de Setup Diário</h3>
+          <p>Exibição nos tablets/celulares dos preparadores de máquinas, sinalizando produto, máquina e ferramentas.</p>
+          <ul class="feature-list">
+            <li>Compatível com qualquer tela ou tablet</li>
+            <li>Elimina impressões e pranchetas físicas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECÇÃO 3: BANNER ESCURO -->
+  <section class="section-banner-dark" id="sobre">
+    <div class="container">
+      <span class="section-tag light">ESPECIALISTAS EM ENGENHARIA E USINAGEM</span>
+      <h2>DESENVOLVIDO POR QUEM ENTENDE O CHÃO DE FÁBRICA</h2>
+      <p>O SetupMaster nasceu da necessidade real de eliminar o tempo desperdiçado e os erros na preparação de máquinas CNC. Desenvolvemos uma solução focada em padronizar o fluxo de trabalho entre a engenharia de processos e a produção, garantindo máxima eficiência e zero paragens imprevistas.</p>
+    </div>
+  </section>
+
+  <!-- SECÇÃO 4: FORMULÁRIO DE AGENDAMENTO -->
+  <section class="section-schedule" id="agendar">
+    <div class="container">
+      <div class="schedule-card">
+        <h2>AGENDE UMA SESSÃO TÉCNICA PERSONALIZADA</h2>
+        <p class="schedule-subtitle">Veja o SetupMaster rodando com as suas peças e tipos de máquinas CNC em menos de 30 minutos.</p>
+
+        <form class="schedule-form">
+          <div class="form-row">
+            <div class="input-group">
+              <label for="sched-fullname">NOME COMPLETO</label>
+              <input type="text" id="sched-fullname" placeholder="Ex: Eng. Roberto Silva" required>
+            </div>
+            <div class="input-group">
+              <label for="sched-email">E-MAIL CORPORATIVO</label>
+              <input type="email" id="sched-email" placeholder="roberto@empresa.com.br" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="sched-company">EMPRESA / INDÚSTRIA</label>
+              <input type="text" id="sched-company" placeholder="Nome da Usinagem / Montadora" required>
+            </div>
+            <div class="input-group">
+              <label for="sched-machines">QUANTIDADE DE MÁQUINAS CNC</label>
+              <select id="sched-machines" required>
+                <option value="1-5">1 a 5 máquinas</option>
+                <option value="6-15">6 a 15 máquinas</option>
+                <option value="16+">Mais de 15 máquinas</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit-large">SOLICITAR DEMONSTRAÇÃO SEM COMPROMISSO</button>
+          <span class="form-disclaimer">Seus dados estão protegidos pela LGPD. Não enviamos spam.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo">SETUP MASTER</div>
+        <p>Plataforma em nuvem especializada no gerenciamento de setups e ferramentas de usinagem industrial.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>NAVEGAÇÃO</h4>
+          <ul>
+            <li><a href="#inicio">Visão Geral da Solução</a></li>
+            <li><a href="#modulos">Fluxo em 5 Etapas</a></li>
+            <li><a href="#recursos">Gestão de Ferramental</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>APLICAÇÕES</h4>
+          <ul>
+            <li><a href="#">Setor Automotivo & Autopeças</a></li>
+            <li><a href="#">Usinagem de Precisão</a></li>
+            <li><a href="#">Matrizarias & Moldes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>SEGURANÇA & SUPORTE</h4>
+          <ul>
+            <li><a href="#">Servidores com backup diário</a></li>
+            <li><a href="#">Privacidade de Dados (LGPD)</a></li>
+            <li><a href="#">Central de Ajuda ao Operador</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 SetupMaster Tecnologia Industrial Ltda. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/pages/home.js"></script>
+</body>
+</html>

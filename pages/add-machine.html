@@ -1,0 +1,36 @@
+<section class="page-container">
+  <div class="page-header">
+    <h2>ADICIONAR MÁQUINA</h2>
+    <a href="machines.html" class="btn btn-secondary">VOLTAR</a>
+  </div>
+
+  <form id="form-machine" class="grid-form">
+    <div class="form-fields">
+      <div class="form-group">
+        <label>NOME DA MÁQUINA</label>
+        <input type="text" id="machine_name" placeholder="Ex: 0101-TRN" required>
+      </div>
+      <div class="form-group">
+        <label>QUANTIDADE MÁXIMA DE FERRAMENTAS</label>
+        <input type="number" id="max_tools" placeholder="12" required>
+      </div>
+      <div class="form-group">
+        <label>TIPO DE MÁQUINA</label>
+        <input type="text" id="machine_type" placeholder="Ex: TORNO CNC" required>
+      </div>
+      <div class="form-group">
+        <label>PERÍODO ENTRE MANUTENÇÕES PREVENTIVAS (DIAS)</label>
+        <input type="number" id="maintenance_days" placeholder="30" required>
+      </div>
+      <button type="submit" class="btn btn-primary">SALVAR MÁQUINA</button>
+    </div>
+
+    <!-- Upload de Imagem -->
+    <div class="image-uploader">
+      <div class="upload-box" id="upload-box">
+        <img src="../assets/images/icons/cube.svg" class="icon-placeholder">
+        <span>+ ADICIONAR IMAGEM</span>
+      </div>
+    </div>
+  </form>
+</section>

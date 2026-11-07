@@ -1,0 +1,185 @@
+
+.hero-card {
+  box-sizing: border-box;
+  flex: 0 1 420px;
+  width: 420px;
+  min-width: 0;
+  background-color: var(--bg-card, #101b2e);
+  border: 1px solid rgba(34, 163, 169, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+  min-height: 36px;
+  box-sizing: border-box;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #081018;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.window-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.card-title {
+  color: var(--text-gray, #e2e8eb);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 2rem;
+  min-height: 250px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--bg-card, #101b2e);
+}
+
+.badge-demo {
+  align-self: flex-start;
+  border: 1px solid var(--color-cyan, #269ca5);
+  color: var(--color-cyan, #64c5c9);
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  border-radius: 2px;
+}
+
+.play-center {
+  align-self: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0px solid #4bc2c7;
+  border-radius: 50%;
+  background: transparent;
+  color: #4bc2c7;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.play-center:hover {
+  background-color: rgba(75, 194, 199, 0.15);
+  transform: scale(1.07);
+}
+
+/* Card de Passos */
+.step-card {
+  background: #ffffff;
+  border: 1px solid rgba(34, 163, 169, 0.3);
+  border-radius: 6px;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.step-num {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-cyan, #2199a5);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.step-card h3 {
+  font-size: 0.95rem;
+  color: #1b2a36;
+  margin: 0 0 0.8rem 0;
+  font-weight: 700;
+}
+
+.step-card p {
+  font-size: 0.8rem;
+  color: #627484;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Card de Recursos */
+.feature-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #11222c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.1rem;
+  color: #1b2a36;
+  margin: 0 0 0.8rem 0;
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  color: #627484;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+/* Card de Agendamento */
+.schedule-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.schedule-card h2 {
+  font-size: 1.4rem;
+  color: #1b2a36;
+  margin: 0 0 0.5rem 0;
+}
+
+@media (max-width: 900px) {
+  .hero-card {
+    flex-basis: 40%;
+  }
+
+  .card-body {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-card {
+    flex: auto;
+    width: 100%;
+  }
+}

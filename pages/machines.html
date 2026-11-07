@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetupMaster - Máquinas</title>
+  
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="shortcut icon" href="../assets/images/icons/favicon-setup_m.svg" type="image/x-icon">
+</head>
+<body>
+
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-logo">
+          <a href="../index.html" class="logo-link">
+            <img src="../assets/images/logo.png" alt="Logo SetupMaster">
+          </a>
+        </div>
+
+        <button
+          class="sidebar-hamburger"
+          id="sidebar-hamburger"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="sidebar-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="sidebar-menu" id="sidebar-menu" aria-label="Navegação principal">
+        <a href="dashboard.html"><img src="../assets/images/icons/dashboard-icon.svg" alt=""> DASHBOARD</a>
+        <a href="machines.html" class="active" aria-current="page"><img src="../assets/images/icons/machine-icon.svg" alt=""> MÁQUINAS</a>
+        <a href="tools.html"><img src="../assets/images/icons/tools-icon.svg" alt=""> FERRAMENTAS</a>
+        <a href="parts.html"><img src="../assets/images/icons/parts-icon.svg" alt=""> PEÇAS</a>
+        <a href="setup-compare.html"><img src="../assets/images/icons/setup-compare.svg" alt=""> SETUP-RÁPIDO</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <img src="../assets/images/icons/user.svg" alt="Ícone de perfil de Arthur Henrique">
+        <div class="user-info">
+          <span class="user-name">Arthur Henrique</span>
+          <small class="user-role">Tech Lead</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-body">
+      <header class="top-header">
+        <h2>MÁQUINAS</h2>
+        <span class="section-tag light" id="machines-subtitle">GERENCIAMENTO FABRIL</span>
+      </header>
+
+      <div class="content-container">
+        
+        <section id="state-empty" class="state-container">
+          <div class="empty-card">
+            <div class="empty-icon-btn" id="btn-open-form-empty">
+              <span>+</span>
+            </div>
+            <h3>ADICIONAR MÁQUINA</h3>
+            <p>Nenhuma máquina cadastrada no sistema. Clique no botão acima para registrar seu primeiro equipamento CNC.</p>
+          </div>
+        </section>
+
+        <section id="state-form" class="state-container hidden">
+          <div class="form-header">
+            <h3>ADICIONAR MÁQUINA</h3>
+            <button class="btn-secondary-sm" id="btn-cancel-form">VOLTAR</button>
+          </div>
+
+          <form id="form-machine" class="grid-form-machine">
+            <div class="form-fields">
+              <div class="form-group">
+                <label for="machine_name">NOME / CÓDIGO DA MÁQUINA</label>
+                <input type="text" id="machine_name" placeholder="Ex: 0101-TRN" required>
+              </div>
+
+              <div class="form-group">
+                <label for="max_tools">QUANTIDADE MÁXIMA DE FERRAMENTAS</label>
+                <input type="number" id="max_tools" placeholder="Ex: 12" required>
+              </div>
+
+              <div class="form-group">
+                <label for="machine_type">TIPO DE MÁQUINA</label>
+                <input type="text" id="machine_type" placeholder="Ex: TORNO CNC" required>
+              </div>
+
+              <div class="form-group">
+                <label for="maintenance_days">PERÍODO ENTRE MANUTENÇÕES PREVENTIVAS (DIAS)</label>
+                <input type="number" id="maintenance_days" placeholder="Ex: 30" required>
+              </div>
+
+              <button type="submit" class="btn-primary-large">SALVAR MÁQUINA</button>
+            </div>
+
+            <div class="image-upload-wrapper">
+              <div class="upload-box" id="upload-box-preview">
+                <img src="../assets/images/fundo-cnc.png" alt="Prévia da imagem da máquina selecionada" id="img-preview" class="img-preview hidden">
+                <div class="upload-placeholder" id="upload-placeholder">
+                  <span class="plus-icon">+</span>
+                  <span>ADICIONAR IMAGEM</span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="state-list" class="state-container hidden">
+          <div class="list-actions-bar">
+            <span class="status-counter" id="status-counter">OPERANDO: 0 / 0</span>
+            <button class="btn-primary-sm" id="btn-open-form-list">+ NOVA MÁQUINA</button>
+          </div>
+
+          <div class="machines-grid" id="machines-container">
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/mockData.js"></script>
+  <script src="../assets/js/pages/machines.js"></script>
+</body>
+</html>
