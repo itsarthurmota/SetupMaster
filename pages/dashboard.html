@@ -9,7 +9,18 @@
   <link rel="shortcut icon" href="../assets/images/icons/favicon-setup_m.svg" type="image/x-icon">
 </head>
 <body>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
 
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  
   <div class="dashboard-shell">
     
     <aside class="sidebar">
@@ -47,6 +58,7 @@
           <span class="user-name">Arthur Henrique</span>
           <small class="user-role">Tech Lead</small>
         </div>
+        <button type="button" id="btn-logout" class="btn-logout">Sair da conta</button>
       </div>
     </aside>
 
@@ -108,7 +120,7 @@
           <a href="machines.html" class="shortcut-card">
             <div class="shortcut-content">
               <div class="shortcut-icon-bg">
-                <img src="../assets/images/icons/settings.svg" alt="" aria-hidden="true">
+                <img src="../assets/images/icons/machine-icon.svg" alt="" aria-hidden="true">
               </div>
               <h4>MÁQUINAS</h4>
               <p>Gerencie e monitore o status das suas máquinas</p>
@@ -119,7 +131,7 @@
           <a href="tools.html" class="shortcut-card">
             <div class="shortcut-content">
               <div class="shortcut-icon-bg">
-                <img src="../assets/images/icons/paper.svg" alt="" aria-hidden="true">
+                <img src="../assets/images/icons/tools-dashboard.svg" alt="" aria-hidden="true">
               </div>
               <h4>FERRAMENTAS</h4>
               <p>Controle o uso e a manutenção das ferramentas</p>
@@ -130,7 +142,7 @@
           <a href="parts.html" class="shortcut-card">
             <div class="shortcut-content">
               <div class="shortcut-icon-bg">
-                <img src="../assets/images/icons/cube.svg" alt="" aria-hidden="true">
+                <img src="../assets/images/icons/engine-parts.svg" alt="" aria-hidden="true">
               </div>
               <h4>ESTOQUE</h4>
               <p>Acompanhe o estoque de Ferramentas e Peças</p>

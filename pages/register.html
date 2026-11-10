@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="../assets/css/main.css">
   <script src="../assets/js/components/togglePassword.js" defer></script>
 </head>
-<body class="auth-page">
+<body
+  class="auth-page"
+  style="background-image: linear-gradient(rgba(11, 19, 25, 0.45), rgba(11, 19, 25, 0.45)), url('../assets/images/register-overlay.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-  <!-- VLIBRAS -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -26,7 +27,6 @@
 
   <div class="auth-container">
 
-    <!-- LADO ESQUERDO: BRANDING -->
     <section class="brand-section">
       <span class="badge">Gestão De Ferramental</span>
 
@@ -52,7 +52,6 @@
       </ul>
     </section>
 
-    
     <section class="register-section">
       <div class="register-card">
 
@@ -60,7 +59,7 @@
           <img src="../assets/images/logo.png" alt="Setup Master" class="card-logo">
           <span class="tag-corporative">Acesso Corporativo</span>
         </header>
-
+        
         <h2>Criar Nova Conta / Cadastrar Indústria</h2>
         <p class="subtitle">Preencha as informações técnicas para configurar seu ambiente de chão de fábrica.</p>
 
@@ -140,6 +139,7 @@
           </label>
 
           <button type="submit" class="btn-submit">CONCLUIR CADASTRO &amp; COMEÇAR SETUP &rarr;</button>
+
         </form>
 
         <p class="card-footer">Já possui cadastro? <a href="login.html">Fazer login</a></p>
@@ -148,5 +148,7 @@
     </section>
 
   </div>
+
+  <script src="../assets/js/pages/register.js"></script>
 </body>
 </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetupMaster - Cadastro e Gestão de Peças</title>
+  
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="shortcut icon" href="../assets/images/icons/favicon-setup_m.svg" type="image/x-icon">
+</head>
+<body>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <div class="dashboard-shell">
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-logo">
+          <a href="../index.html" class="logo-link">
+            <img src="../assets/images/logo.png" alt="Logo SetupMaster">
+          </a>
+        </div>
+
+        <button
+          class="sidebar-hamburger"
+          id="sidebar-hamburger"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="sidebar-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="sidebar-menu" id="sidebar-menu" aria-label="Navegação principal">
+        <a href="dashboard.html"><img src="../assets/images/icons/dashboard-icon.svg" alt=""> DASHBOARD</a>
+        <a href="machines.html"><img src="../assets/images/icons/machine-icon.svg" alt=""> MÁQUINAS</a>
+        <a href="tools.html"><img src="../assets/images/icons/tools-icon.svg" alt=""> FERRAMENTAS</a>
+        <a href="parts.html" class="active" aria-current="page"><img src="../assets/images/icons/parts-icon.svg" alt=""> PEÇAS</a>
+        <a href="setup-compare.html"><img src="../assets/images/icons/setup-compare.svg" alt=""> SETUP-RÁPIDO</a>
+      </nav>
+
+      <div class="sidebar-user">
+         <img src="../assets/images/icons/user.svg" alt="Ícone de perfil de Arthur Henrique">
+        <div class="user-info">
+          <span class="user-name">Arthur Henrique</span>
+          <small class="user-role">Tech Lead</small>
+        </div>
+        <button type="button" id="btn-logout" class="btn-logout">Sair da conta</button>
+      </div>
+    </aside>
+
+    <main class="main-body">
+      <header class="top-header">
+        <h2>PEÇAS</h2>
+        <span class="section-tag light">CADASTRO E ENGENHARIA</span>
+      </header>
+
+      <div class="content-container">
+        
+        <section id="parts-state-empty" class="state-container hidden">
+          <div class="empty-card">
+            <div class="empty-icon-btn" id="btn-open-part-form-empty">
+              <span>+</span>
+            </div>
+            <h3>ADICIONAR PEÇA</h3>
+            <p>Nenhuma peça cadastrada no sistema. Clique no botão acima para registrar a primeira peça industrial e vincular seu jogo de ferramentas.</p>
+          </div>
+        </section>
+
+        <section id="parts-state-form" class="state-container hidden">
+          <div class="form-header">
+            <h3>ADICIONAR PEÇA</h3>
+            <button class="btn-secondary-sm" id="btn-cancel-part-form">VOLTAR</button>
+          </div>
+
+          <form id="form-part" class="grid-form-entity">
+            <div class="form-fields">
+              <div class="form-group">
+                <label for="part_code">CÓDIGO DA PEÇA</label>
+                <input type="text" id="part_code" placeholder="Ex: P-101" required>
+              </div>
+
+              <div class="form-group">
+                <label for="part_name">NOME / DESCRIÇÃO DA PEÇA</label>
+                <input type="text" id="part_name" placeholder="Ex: Engrenagem Primária" required>
+              </div>
+
+              <div class="form-group">
+                <label for="part_manufacturer">FABRICANTE / CLIENTE</label>
+                <input type="text" id="part_manufacturer" placeholder="Ex: Usitec Componentes" required>
+              </div>
+
+              <div class="form-group">
+                <label for="part_machine">MÁQUINA PRINCIPAL ALOCADA</label>
+                <select id="part_machine" class="form-control" required>
+                  <option value="">Selecione a máquina...</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn-primary-large">SALVAR PEÇA</button>
+            </div>
+
+            <div class="image-upload-wrapper">
+              <div class="upload-box" id="upload-box-part">
+                <img src="../assets/images/fundo-cnc.png" alt="Preview da Peça" id="img-preview-part" class="img-preview hidden">
+                <div class="upload-placeholder" id="upload-placeholder-part">
+                  <span class="plus-icon">+</span>
+                  <span>ADICIONAR IMAGEM</span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="parts-state-list" class="state-container">
+          <div class="list-actions-bar">
+            <span class="status-counter" id="parts-status-counter">CADASTRADAS: 0</span>
+            <button class="btn-primary-sm" id="btn-open-part-form-list">+ NOVA PEÇA</button>
+          </div>
+
+          <div class="entities-grid" id="parts-container">
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/mockData.js"></script>
+  <script src="../assets/js/pages/parts.js"></script>
+</body>
+</html>

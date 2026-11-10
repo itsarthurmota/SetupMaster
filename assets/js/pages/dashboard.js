@@ -1,10 +1,32 @@
-// assets/js/pages/dashboard.js
+document.addEventListener('DOMContentLoaded', () => {
+  const loggedUser = JSON.parse(localStorage.getItem('setupmaster_logged_user'));
+
+  if (!loggedUser) {
+    alert('Acesso negado! Faça login primeiro.');
+    window.location.href = 'login.html';
+    return;
+  }
+
+  const userNameEl = document.querySelector('.user-name');
+  const userRoleEl = document.querySelector('.user-role');
+
+  if (userNameEl) userNameEl.textContent = loggedUser.fullname;
+  if (userRoleEl) userRoleEl.textContent = loggedUser.role || 'Operador';
+
+  const btnLogout = document.getElementById('btn-logout');
+  if (btnLogout) {
+    btnLogout.addEventListener('click', () => {
+      localStorage.removeItem('setupmaster_logged_user');
+      window.location.href = '../index.html';
+    });
+  }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Calcula Indicadores
+  
   const totalMachines = mockDatabase.maquinas ? mockDatabase.maquinas.length : 0;
   
-  // Extrai todas as ferramentas das peças cadastradas
+ 
   let allTools = [];
   if (mockDatabase.pecas) {
     mockDatabase.pecas.forEach(peca => {
@@ -15,14 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const toolsInUseCount = allTools.length;
-  const toolsStockCount = toolsInUseCount + 8; // Simulação de estoque restante
+  const toolsStockCount = toolsInUseCount + 8;
 
-  // 2. Atualiza elementos do DOM
   document.getElementById('kpi-machines').textContent = totalMachines;
   document.getElementById('kpi-tools-in-use').textContent = toolsInUseCount;
   document.getElementById('kpi-tools-stock').textContent = toolsStockCount;
 
-  // 3. Renderiza Atividades
   const container = document.getElementById('activities-container');
   
   if (mockDatabase.pecas && mockDatabase.pecas.length >= 2) {
@@ -31,12 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     container.innerHTML = `
       <div class="activity-card filled">
-        <h4>  Setup Otimizado: ${pecaA.part_code} ➔ ${pecaB.part_code}</h4>
+        <h4>Setup Otimizado: ${pecaA.part_code} -> ${pecaB.part_code}</h4>
         <p>Comparação realizada recentemente. 3 ferramentas mantidas no carrossel CNC.</p>
       </div>
       <div class="activity-card filled">
-        <h4> Máquina Registrada</h4>
-        <p> Torno CNC ROMI 0101-TRN cadastrado e pronto para operação.</p>
+        <h4>Máquina Registrada</h4>
+        <p>Torno CNC ROMI 0101-TRN cadastrado e pronto para operação.</p>
       </div>
     `;
   } else {

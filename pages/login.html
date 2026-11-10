@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <script src="../assets/js/components/togglePassword.js" defer></script>
 </head>
-<body class="auth-page login-page">
+<body
+    class="auth-page login-page"
+    style="background-image: linear-gradient(rgba(11, 19, 25, 0.45), rgba(11, 19, 25, 0.45)), url('../assets/images/login.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <main class="auth-container">
 
-      <!-- CARD ESQUERDO: BRANDING -->
       <section class="brand-section">
         <span class="badge">Gestão de Ferramental</span>
         <h1>Tecnologia e precisão para um <span class="highlight">setup sem surpresa</span></h1>
         <p class="brand-description">Elimine paradas não programadas em tornos e centros de usinagem com catálogo unificado de fresas, brocas, pastilhas e suportes.</p>
       </section>
 
-      <!-- CARD DIREITO: LOGIN -->
       <section class="register-section">
         <div class="register-card">
 
@@ -67,17 +67,28 @@
             <button type="submit" class="btn-submit">ENTRAR &rarr;</button>
           </form>
 
+          <div class="social-auth-separator">
+            <span>OU ENTRE COM</span>
+          </div>
+
+          <div class="social-auth-buttons">
+            <button type="button" class="btn-social btn-google" id="btn-google-login">
+              <img src="../assets/images/icons/google-icon-auth.svg" alt="Google"> Google
+            </button>
+            <button type="button" class="btn-social btn-github" id="btn-github-login">
+              <img src="../assets/images/icons/github-auth-icon.svg" alt="GitHub"> GitHub
+            </button>
+          </div>
+
           <p class="card-footer">Ainda não possui cadastro? <a href="register.html">Cadastrar-se</a></p>
         </div>
       </section>
 
     </main>
 
-    <!-- ===== MODAL POP-UP DE RECUPERAÇÃO DE SENHA ===== -->
     <div class="modal-overlay" id="resetPasswordModal" aria-hidden="true">
       <div class="modal-card">
         
-        <!-- Cabeçalho do Modal -->
         <div class="modal-header">
           <div class="modal-title-box">
             <div class="key-icon-box">
@@ -91,7 +102,6 @@
           <button class="close-modal-btn" id="closeModalBtn" type="button" aria-label="Fechar modal">&times;</button>
         </div>
 
-        <!-- ETAPA 1: DIGITAR E-MAIL PARA ENVIAR CÓDIGO -->
         <div class="modal-body modal-step active" id="modalStep1">
           <div class="modal-alert-box">
             <span class="alert-icon">
@@ -116,7 +126,6 @@
           </form>
         </div>
 
-        <!-- ETAPA 2: DIGITAR TOKEN DE 6 DÍGITOS E DEFINIR SENHA -->
         <div class="modal-body modal-step" id="modalStep2">
           <div class="modal-alert-box">
             <span class="alert-icon">
@@ -184,7 +193,6 @@
       </div>
     </div>
 
-    <!-- Script de Alternância de Etapas -->
     <script>
       const openModalBtn = document.getElementById('openModalBtn');
       const closeModalBtn = document.getElementById('closeModalBtn');
@@ -273,7 +281,8 @@
       });
     </script>
 
-    <!-- VLIBRAS -->
+    <script src="../assets/js/pages/login.js"></script>
+
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>

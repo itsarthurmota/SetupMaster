@@ -62,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Exibe o painel de resultados
     resultsPanel.classList.remove('hidden');
+    resultsPanel.classList.remove('fade-in');
+    void resultsPanel.offsetWidth;
+    resultsPanel.classList.add('fade-in');
   });
 
   function renderList(elementId, tools) {

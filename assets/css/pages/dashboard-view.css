@@ -1,3 +1,37 @@
+.sidebar-user {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-logout {
+  width: 100%;
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: 'Noto Sans Condensed', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #c0392b;
+}
+
+@media (min-width: 761px) {
+  .btn-logout {
+    display: none;
+  }
+
+  .sidebar:hover .btn-logout,
+  .sidebar:focus-within .btn-logout {
+    display: block;
+  }
+}
 
 .stats-grid {
   display: grid;
@@ -55,7 +89,6 @@
   height: 26px;
   opacity: 0.85;
 }
-
 
 .activities-section {
   background-color: var(--bg-card, #0b1520);
@@ -136,7 +169,6 @@
   color: var(--text-gray, #cfd8dc);
   font-size: 0.85rem;
 }
-
 
 .shortcuts-grid {
   display: grid;

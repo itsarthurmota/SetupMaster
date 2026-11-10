@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetupMaster - Painel do Operador</title>
+  
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/pages/operator.css">
+  <link rel="shortcut icon" href="../assets/images/icons/favicon-setup_m.svg" type="image/x-icon">
+</head>
+<body class="operator-body">
+
+  <div class="operator-shell">
+    <header class="operator-header">
+      <div class="operator-brand">
+          <a href="../index.html" class="logo-link">
+            <img src="../assets/images/logo.png" alt="Logo SetupMaster">
+          </a>
+        <span class="operator-tag">PAINEL DE CHÃO DE FÁBRICA</span>
+      </div>
+      <div class="operator-user-bar">
+        <img src="../assets/images/icons/user.svg" alt="usericon" width="120" height="36" class="user-picture">
+        <span id="op-user-name">Operador CNC</span>
+        <button type="button" id="btn-logout" class="btn-logout-sm">SAIR</button>
+      </div>
+    </header>
+
+    <main class="operator-main">
+      <section class="operator-selection-card">
+        <div class="form-group">
+          <label for="op-machine-select">SELECIONE A MÁQUINA OPERANTE:</label>
+          <select id="op-machine-select">
+            <option value="">Carregando máquinas...</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="operator-setup-card">
+        <div class="op-card-header">
+          <h3>CHECAGEM DE SETUP RÁPIDO</h3>
+          <span class="op-status-badge">PRONTO PARA TROCA</span>
+        </div>
+
+        <div class="op-parts-transition">
+          <div class="op-part-box current">
+            <small>PEÇA ATUAL EM MÁQUINA</small>
+            <strong id="op-current-part">P-101 (Engrenagem Primária)</strong>
+          </div>
+          <div class="op-arrow">&rarr;</div>
+          <div class="op-part-box next">
+            <small>PRÓXIMA PEÇA (OP)</small>
+            <strong id="op-next-part">P-102 (Eixo de Transmissão)</strong>
+          </div>
+        </div>
+
+        <div class="op-checklist-container">
+          <h4>LISTA DE AÇÕES NO CARROSSEL DE FERRAMENTAS:</h4>
+          
+          <div class="op-checklist-group">
+            <h5 class="action-title remove">REMOVER DO CARROSSEL (VERMELHO)</h5>
+            <ul class="op-list" id="op-list-remove">
+              <li><input type="checkbox" id="chk1"> <label for="chk1">T04 - Inserto de Roscar M12</label></li>
+              <li><input type="checkbox" id="chk2"> <label for="chk2">T05 - Macho M8</label></li>
+            </ul>
+          </div>
+
+          <div class="op-checklist-group">
+            <h5 class="action-title add">ADICIONAR AO CARROSSEL (AZUL)</h5>
+            <ul class="op-list" id="op-list-add">
+              <li><input type="checkbox" id="chk3"> <label for="chk3">T06 - Inserto de Acabamento VBMT</label></li>
+              <li><input type="checkbox" id="chk4"> <label for="chk4">T07 - Fresa de Canto APKT</label></li>
+            </ul>
+          </div>
+
+          <div class="op-checklist-group">
+            <h5 class="action-title keep">MANTER NO CARROSSEL (VERDE)</h5>
+            <ul class="op-list" id="op-list-keep">
+              <li><span>T01 - Broca Ø10mm</span></li>
+              <li><span>T02 - Mandril BT40</span></li>
+              <li><span>T03 - Fresa de Facear</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <button type="button" class="btn-primary-large" id="btn-finish-setup">CONFIRMAR E LIBERAR MÁQUINA &rarr;</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/mockData.js"></script>
+  <script src="../assets/js/pages/operator.js"></script>
+</body>
+</html>

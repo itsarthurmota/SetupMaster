@@ -261,3 +261,57 @@ body.login-page {
     font-size: 16px !important;
   }
 }
+.social-auth-separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 18px 0;
+  color: var(--text-gray, #90a4ae);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.social-auth-separator::before,
+.social-auth-separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.social-auth-separator span {
+  padding: 0 10px;
+}
+
+.social-auth-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--bg-primary, #071218);
+  border: 1px solid rgba(34, 163, 169, 0.25);
+  border-radius: 6px;
+  padding: 10px;
+  color: #ffffff;
+  font-family: 'Noto Sans Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-social img {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-social:hover {
+  border-color: var(--color-cyan, #22a3a9);
+  background-color: rgba(34, 163, 169, 0.12);
+}

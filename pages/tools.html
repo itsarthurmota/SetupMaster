@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetupMaster - Catálogo de Ferramentas</title>
+  
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="shortcut icon" href="../assets/images/icons/favicon-setup_m.svg" type="image/x-icon">
+</head>
+<body>
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <div class="dashboard-shell">
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-logo">
+          <a href="../index.html" class="logo-link">
+            <img src="../assets/images/logo.png" alt="Logo SetupMaster">
+          </a>
+        </div>
+
+        <button
+          class="sidebar-hamburger"
+          id="sidebar-hamburger"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="sidebar-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="sidebar-menu" id="sidebar-menu" aria-label="Navegação principal">
+        <a href="dashboard.html"><img src="../assets/images/icons/dashboard-icon.svg" alt=""> DASHBOARD</a>
+        <a href="machines.html"><img src="../assets/images/icons/machine-icon.svg" alt=""> MÁQUINAS</a>
+        <a href="tools.html" class="active" aria-current="page"><img src="../assets/images/icons/tools-icon.svg" alt=""> FERRAMENTAS</a>
+        <a href="parts.html"><img src="../assets/images/icons/parts-icon.svg" alt=""> PEÇAS</a>
+        <a href="setup-compare.html"><img src="../assets/images/icons/setup-compare.svg" alt=""> SETUP-RÁPIDO</a>
+      </nav>
+
+      <div class="sidebar-user">
+         <img src="../assets/images/icons/user.svg" alt="Ícone de perfil de Arthur Henrique">
+        <div class="user-info">
+          <span class="user-name">Arthur Henrique</span>
+          <small class="user-role">Tech Lead</small>
+        </div>
+        <button type="button" id="btn-logout" class="btn-logout">Sair da conta</button>
+      </div>
+    </aside>
+
+    <main class="main-body">
+      <header class="top-header">
+        <h2>FERRAMENTAS</h2>
+        <span class="section-tag light">CATÁLOGO E INVENTÁRIO</span>
+      </header>
+
+      <div class="content-container">
+        
+        <section id="tools-state-empty" class="state-container hidden">
+          <div class="empty-card">
+            <div class="empty-icon-btn" id="btn-open-tool-form-empty">
+              <span>+</span>
+            </div>
+            <h3>ADICIONAR FERRAMENTA</h3>
+            <p>Nenhuma ferramenta cadastrada no estoque. Clique no botão acima para adicionar brocas, fresas, insertos ou mandris.</p>
+          </div>
+        </section>
+
+        <section id="tools-state-form" class="state-container hidden">
+          <div class="form-header">
+            <h3>ADICIONAR FERRAMENTA</h3>
+            <button class="btn-secondary-sm" id="btn-cancel-tool-form">VOLTAR</button>
+          </div>
+
+          <form id="form-tool" class="grid-form-entity">
+            <div class="form-fields">
+              <div class="form-group">
+                <label for="tool_name">NOME / ESPECIFICAÇÃO</label>
+                <input type="text" id="tool_name" placeholder="Ex: Broca Ø10mm Carbide" required>
+              </div>
+
+              <div class="form-group">
+                <label for="tool_type">TIPO DE FERRAMENTA</label>
+                <input type="text" id="tool_type" placeholder="Ex: Furação / Fresamento / Rosca" required>
+              </div>
+
+              <div class="form-group">
+                <label for="insert_type">TIPO DE INSERTO / CLASSIFICAÇÃO</label>
+                <input type="text" id="insert_type" placeholder="Ex: VBMT 160404 / Metal Duro">
+              </div>
+
+              <div class="form-group">
+                <label for="supplier">FORNECEDOR / FABRICANTE</label>
+                <input type="text" id="supplier" placeholder="Ex: Sandvik / Seco Tools">
+              </div>
+
+              <button type="submit" class="btn-primary-large">SALVAR FERRAMENTA</button>
+            </div>
+
+            <div class="image-upload-wrapper">
+              <div class="upload-box" id="upload-box-tool">
+                <img src="../assets/images/fundo-cnc.png" alt="Preview da Ferramenta" id="img-preview-tool" class="img-preview hidden">
+                <div class="upload-placeholder" id="upload-placeholder-tool">
+                  <span class="plus-icon">+</span>
+                  <span>ADICIONAR IMAGEM</span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="tools-state-list" class="state-container">
+          <div class="list-actions-bar">
+            <span class="status-counter" id="tools-status-counter">CADASTRADAS: 0</span>
+            <button class="btn-primary-sm" id="btn-open-tool-form-list">+ NOVA FERRAMENTA</button>
+          </div>
+
+          <div class="entities-grid" id="tools-container">
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/mockData.js"></script>
+  <script src="../assets/js/pages/tools.js"></script>
+</body>
+</html>
